@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/Home.vue' // Asegúrate de tener el componente Home creado
+import Home from '../components/Home.vue';
+import FormularioProducto from '../components/FormularioProducto.vue';
 
 const routes = [
   {
@@ -7,6 +8,11 @@ const routes = [
     name: 'Home',
     component: Home,
   },
+  {
+    path: '/formproducto',
+    name: "Producto",
+    component: FormularioProducto
+  }
   // Agrega más rutas según sea necesario
 ];
 

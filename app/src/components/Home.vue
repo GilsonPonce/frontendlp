@@ -1,26 +1,32 @@
 <script setup>
-import { ref } from 'vue'
 import CardProducto from './CardProducto.vue';
+import Pagination from './Pagination.vue';
+import producto from '../bd/productos';
 
-defineProps({
-  msg: String,
-})
+const productos = () => {
+  let productos_collection = []
+  for(let i = 0; i < 10; i++){
+    productos_collection.push(producto);
+  }
+  return productos_collection;
+}
 
-const count = ref(0)
 </script>
 
 <template>
-<div class="container text-center pt-3">
-  <div class="row">
-    <div class="col-3">
-      <CardProducto />
+<div class="text-left pt-3 home">
+  <div class="row g-4">
+    <div class="col-12 col-sm-3" v-for="producto in productos()">
+      <CardProducto :producto="producto" class="text-start"/>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col">
+      <Pagination />
     </div>
   </div>
 </div>
 </template>
 
 <style scoped>
-.container{
-  height: 100%;
-}
 </style>
