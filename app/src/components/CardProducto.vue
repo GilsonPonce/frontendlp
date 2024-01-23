@@ -9,11 +9,16 @@
       <span class="badge text-bg-light" v-if="producto.modelo">Modelo: {{ producto.modelo }}</span>
       <span class="badge text-bg-secondary" v-if="producto.pais">Pais: {{ producto.pais }}</span>
       <br>
-      <a href="#" class="btn btn-primary btn-sm mt-3">Ver</a>
+      <!--<a href="#" class="btn btn-primary btn-sm mt-3">Ver</a>
+      -->
+      <v-flex class="btn btn-primary btn-sm mt-3">
+        <Detalles />
+      </v-flex>
     </div>
   </div>
 </template>
 <script setup>
+import Detalles from './Detalles.vue'
 const props = defineProps(['producto'])
 </script>
 <style scoped>
