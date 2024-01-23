@@ -17,7 +17,7 @@ const routes = [
     name: "Producto",
     component: FormularioProducto
   },
-  // Agrega más rutas según sea necesario
+  
 
   {
     path: '/pedidos',

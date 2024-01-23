@@ -1,5 +1,3 @@
-<!-- Pedidos.vue -->
-
 <template>
   <div class="pedidos">
     <h2>Lista de Pedidos</h2>
