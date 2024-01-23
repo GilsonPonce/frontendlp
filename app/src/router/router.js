@@ -21,7 +21,7 @@ const routes = [
 
   {
     path: '/pedidos',
-    name: 'Pedidos',
+    name: "Pedidos",
     component: Pedidos
   },
 
