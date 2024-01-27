@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <router-link to="/" class="nav-link activate">Home</router-link>
+            <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/formproducto" class="nav-link active">Agregar Producto</router-link>
+            <router-link to="/formproducto" class="nav-link">Agregar Producto</router-link>
         </li>
       </ul>
     </div>
@@ -20,7 +20,9 @@
   </template>
   
   <script setup>
-  
+  import { onMounted, watch, watchEffect, ref } from 'vue';
+  import { useRouter, useRoute } from 'vue-router'
+ 
   </script>
   
   <style scoped>
@@ -31,8 +33,7 @@
     border-radius: 10px;
     margin-top: 1rem;
   }
-
-  .activate{
+  .router-link-active{
     background-color: #00a998;
     border-radius: 10px;
   }
