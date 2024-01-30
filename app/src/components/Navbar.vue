@@ -11,7 +11,13 @@
             <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-            <router-link to="/formproducto" class="nav-link">Agregar Producto</router-link>
+            <router-link to="/producto" class="nav-link">Agregar Producto</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/usuario" class="nav-link">Usuario</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/persona" class="nav-link">Persona</router-link>
         </li>
       </ul>
     </div>
