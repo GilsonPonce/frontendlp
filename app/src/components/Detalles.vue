@@ -14,18 +14,23 @@ export default {
         handleAlertClick(){
             // Create a variable to store the HTML content
             const htmlContent = `
-                <p>Producto: ${this.producto.nombre}</p>
+                <h1>${this.producto.nombre}</h1>
                 <p>Marca: ${this.producto.marca}</p>
                 <p>Modelo: ${this.producto.modelo}</p>
+                <p>Valor: ${this.producto.valor}</p>
+                <p>Descuento: ${this.producto.descuento}</p>
                 <p>Pais: ${this.producto.pais}</p>
+                <p>Proveedor: ${this.producto.proveedor}</p>
+                <p>Cantidad Disponible: ${this.producto.cantidad}</p>
                 <p>Descripion: ${this.producto.descripcion}</p>
             `;
+
+            const imgPath = '${this.producto.imagen_path}';
             
             // Use the created HTML content in SweetAlert2
             Swal.fire({
-                title: "Detalles del Producto",
                 html: htmlContent,
-                imageUrl: "/src/assets/refrigerador.jpeg",
+                imageUrl: imgPath,
                 imageWidth: '400px',
                 imageAlt: 'Producto'
             });
