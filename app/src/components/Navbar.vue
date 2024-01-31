@@ -19,6 +19,12 @@
         <li class="nav-item">
             <router-link to="/persona" class="nav-link">Persona</router-link>
         </li>
+
+        <li class="nav-item">
+            <router-link to="/pedidos" class="nav-link active">Pedidos</router-link>
+        </li>
+        
+        
       </ul>
     </div>
   </div>

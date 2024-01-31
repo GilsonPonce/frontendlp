@@ -3,6 +3,8 @@ import Home from '../components/Home.vue';
 import FormularioProducto from '../components/FormularioProducto.vue';
 import FormularioPersona from '../components/FormularioPersona.vue';
 import Persona from '../views/Persona.vue';
+import Pedidos from '../components/Pedidos.vue';
+
 
 const routes = [
   {
@@ -24,8 +26,13 @@ const routes = [
     path: '/persona',
     name: "Persona",
     component: Persona
-  }
-  // Agrega más rutas según sea necesario
+  },
+  {
+    path: '/pedidos',
+    name: "Pedidos",
+    component: Pedidos
+  },
+
 ];
 
 const router = createRouter({
