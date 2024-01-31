@@ -4,7 +4,8 @@ import FormularioProducto from '../components/FormularioProducto.vue';
 import FormularioPersona from '../components/FormularioPersona.vue';
 import Persona from '../views/Persona.vue';
 import Pedidos from '../components/Pedidos.vue';
-
+import FormularioPedido from '../components/FormularioPedido.vue';
+import Pedido from '../views/Pedido.vue'; // Importa el nuevo componente Pedido
 
 const routes = [
   {
@@ -14,41 +15,41 @@ const routes = [
   },
   {
     path: '/producto/:id?',
-    name: "Producto",
-    component: FormularioProducto
+    name: 'Producto',
+    component: FormularioProducto,
   },
   {
     path: '/usuario/:id?',
-    name: "Usuario",
-    component: FormularioPersona
+    name: 'Usuario',
+    component: FormularioPersona,
   },
   {
     path: '/persona',
-    name: "Persona",
-    component: Persona
+    name: 'Persona',
+    component: Persona,
   },
   {
     path: '/pedidos',
-    name: "Pedidos",
-    component: Pedidos
+    name: 'Pedidos',
+    component: Pedidos,
+  },
+  {
+    path: '/pedidoVista',
+    name: 'PedidoVista',
+    component: Pedido,
   },
 
+  
+  {
+    path: '/pedido/:id?', // Puedes ajustar el nombre de la ruta si es necesario
+    name: 'Pedido',
+    component: FormularioPedido,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
-// router.beforeEach((to, from, next) => {
-//   const isAuthenticated = /* Lógica para verificar si el usuario está autenticado */;
-
-//   if (to.matched.some(record => record.meta.requiresAuth) && !isAuthenticated) {
-//     // Redirigir a la página de inicio de sesión si la ruta requiere autenticación
-//     next({ name: 'Home' });
-//   } else {
-//     next();
-//   }
-// });
 
 export default router;
