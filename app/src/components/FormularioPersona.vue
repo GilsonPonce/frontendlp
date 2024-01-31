@@ -40,7 +40,7 @@
     import { onMounted, ref } from 'vue';
     import { createPersona, getPersona, updatePersona } from '../servicios/persona';
     import { validar_form } from '../helpers/persona';
-    import Swal from 'sweetalert2'
+    import Swal from 'sweetalert2';
     import { useRoute, useRouter } from 'vue-router';
 import router from '../router/router';
     const route = useRoute();
