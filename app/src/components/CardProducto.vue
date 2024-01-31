@@ -11,16 +11,13 @@
       <br>
       <!--<a href="#" class="btn btn-primary btn-sm mt-3">Ver</a>
       -->
-      <v-flex class="btn btn-primary btn-sm mt-3">
-        <Detalles />
-      </v-flex>
-      <a href="#" class="btn btn-primary btn-sm mt-3">Ver</a>
+      <Detalles :producto="producto" />
       <button class="btn btn-secondary btn-sm mt-3 ms-1" @click="editar(producto)">Editar</button>
     </div>
   </div>
 </template>
 <script setup>
-import Detalles from './Detalles.vue'
+import Detalles from './Detalles.vue';
 import { useRouter } from 'vue-router';
 
 const props = defineProps(['producto'])
