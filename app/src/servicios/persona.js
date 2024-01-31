@@ -1,4 +1,3 @@
-import axios from 'axios'
 import instance_axios from './axios'
 
 export const createPersona = async(info) => {
